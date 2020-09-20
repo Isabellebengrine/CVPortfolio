@@ -1,0 +1,16 @@
+#imgnavbar {
+    width:100px;
+}
+
+/*pour voir bouton hamburger sinon apparait blanc sur blanc*/
+.navbar-dark .navbar-toggler {
+    color: darkcyan;
+    border-color: darkcyan;
+}
+
+
+
+span.spamkiller {
+    display:none;
+}
+

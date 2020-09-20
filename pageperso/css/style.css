@@ -1,0 +1,139 @@
+﻿*{margin: 0; padding: 0;}/*pour remettre à zero tous les styles ajoutés par défaut par le nvgtr pour avoir meilleur controle de son design - pour projets plus complexes, voir fichier normalize.css ou reset.css*/
+/*bonne pratiq: définir des propriétés de police et taille de texte qui seront appliquées sur tout site. ces valeurs seront héritées par chacun des élts sauf ceux pour lesquels on aura spécifié qqch d'autre:*/
+html{
+	font-family: 'arial';
+	font-size: 16px;}
+
+#hero{
+	background: url("../images/fond.jpg");/*pour image de fond de section hero*/
+	background-repeat: no-repeat;/*par defaut, nvgtr va repeter img pour remplir toute la page sauf si no-repeat specified*/
+	background-size: cover;/*pour adapter largeur img a largeur de div*/
+	/*height: 100%;*/}
+
+nav{
+	background-color: rgba(0,0,0,0.5);/*0,0,0, pour noir et dernier nombre 0.5 pour transparence*/
+	text-align: center;/*pour positionner texte du menu*/
+	padding: 20px;}/*ajout d'espace a l'interieur de balise nav entre liens*/
+
+#bandeau{
+	margin-top: 2%;/*ajout d'un espace au-dessus de div bandeau*/
+	margin-bottom: 2%;/*ajout d'un espace en bas de div bandeau*/
+	background-color: rgba(255,255,255,0.5);}
+
+#contenu{
+	text-align: center;
+	width: 50%;
+	padding: 4%;}/*pour q bouton ne depasse pas du bandeau*/
+
+#contenu img{
+	margin-right: 1em;
+}
+
+#contenu a{/*cible uniqmt liens de div contenu*/
+	color: blue;
+	font-size: 20px;/*definit taille de police*/
+	font-family: 'Caveat', cursive;
+	border: 2px solid blue;/*ajt espace autour du lien*/
+	border-radius: 15px;/*pour rendre bords du bouton avec coins arrondis*/
+	padding: 20px;
+	transition: ease 1s;}/*ajt effet de transition: bouton change de couleur progressivement*/
+
+#contenu a:hover{
+	color: white;background-color: blue;}/*:hover definit couleur du lien et de la boite au survol de la souris*/
+
+#contenu img:hover{
+	transform: rotate(360deg) scale(1.5);/*precise taille finale apres rotation ici plus 50%*/
+	transition: 0.5s;}/*definit transformation du logo au survol de la souris, avec rotation et vitesse de transition*/
+
+#apropos{
+	display: flex;/*pour identifier le contenant de boiteflex*/
+	flex-flow: row wrap; /*short for flex-direction: row;	flex-wrap: wrap;*/
+	justify-content: space-around;}
+
+#apropos_image{
+	flex: 1;/*identifie id comme 1e colonne de boiteflex*/
+	max-width: 100%;/*image prend au maximum la largeur de son contenant soit 100% de 1/3 de page*/}
+
+#apropos_texte{
+	padding: 10px;
+	flex: 2;/*identifie cet id comme 2e col de boiteflex*/
+	text-align: justify;
+	font-family: 'Oswald', sans-serif;}
+
+#services {
+	display: flex;/*donc nvgtr met immédiatement contenu de cette div en colonnes*/
+	flex-flow: row wrap; /*short for flex-direction: row;	flex-wrap: wrap;*/
+	justify-content: space-around;/*displays the flex items with space before, between, and after the lines*/
+	background-color: #666;/*donne fond gris*/
+	color: white;/*donne couleur texte blanc*/
+	padding: 10px;/*décolle contenu des cotés de la boite*/
+	text-align: center;}
+
+.services_item p{
+	text-align: center;
+	padding: 20px;}
+
+footer {
+	padding: 20px 0;
+	display:flex;
+	justify-content: center;}
+
+footer a{
+	color: black;
+}
+
+.social{
+	padding: 20px;
+}
+
+@font-face {/*pour charger une police avec tous formats disponibles, attention: enreg sources
+	dans dossier fonts dans dossier du projet*/
+    font-family: 'abecedaryregular';
+    src: url('../fonts/abecedary-webfont.woff2') format('woff2'),
+         url('../fonts/abecedary-webfont.woff') format('woff'),
+         url('../fonts/abecedary.tff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1{
+	color: blue;
+	font-size: 40px;
+	font-family: 'abecedaryregular';
+}
+h2{
+	color: black;
+	font-family: 'Oswald', sans-serif;}
+h3{
+	color: black;
+	font-family: 'Caveat', cursive;
+}
+h4{
+	color: rgb(0, 204, 255);
+	font-size: 20px;
+	font-family: 'Caveat', cursive;
+}
+
+/*pour les liens*/
+a{
+	color: white;
+	text-decoration: none;/*pour ne pas afficher surlignage par defaut des liens dans nvgtr*/
+	padding: 50px;
+	transition: 1s;}/*ajt effet de transition dans changement de couleur du lien*/
+a:hover{color: aqua;}
+
+/*media query pour responsive design*/
+@media screen and (max-width: 414px){/*point de rupture breakpoint 414 px = ecran  large de iphone7*/
+	#apropos{
+		flex-direction: column;
+	}/*referme declaration #apropos*/
+	#services{
+		flex-direction: column;
+	}/*referme declaration #services*/
+	nav a{
+		display: block;
+		padding: 10px;
+	}
+}/*referme la media query*/
+
+
