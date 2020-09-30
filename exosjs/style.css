@@ -1,0 +1,23 @@
+#formnbmgq {
+    width: 100%;
+    padding: 50px 0;
+    text-align: center;
+    background-color: cyan;
+    margin-top: 20px;
+    display: none;
+  }
+
+/*pour changer affichage des retours lors du jeu nb magique selon si faux ou exact:*/
+.faux {
+  font-weight: bold;
+  font-size: 1.5em;
+  color: red;
+}
+
+.exact {
+  font-weight: bold;
+  font-size: 1.5em;
+  color: blue ;
+}
+
+

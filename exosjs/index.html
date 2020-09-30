@@ -1,79 +1,228 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-  <head>
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <title>Evaluation Javascript</title>
-  </head>
-  <body>
-    <div class="container"> 
-      <div class="row">
-        <div class="col-12 col-sm-12 text-center">
-          <h1>Evaluation Javascript</h1>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-12 col-sm-12 text-center">
-          <p>Cliquez sur le bouton de votre choix à vos risques et périls:*</p>
-        </div>
-      </div>
-      <div class="btn-group-lg text-center">
-        <button type="button" id="exercice1" class="btn btn-info col-12 col-sm-2 m-1 m-sm-2">Exercice 1</button>
-        <button type="button" id="exercice2" class="btn btn-primary col-12 col-sm-2 m-1 m-sm-2">Exercice 2</button>
-        <button type="button" id="exercice3" class="btn btn-success col-12 col-sm-2 m-1 m-sm-2">Exercice 3</button>
-        <button type="button" id="exercice4" class="btn btn-warning col-12 col-sm-2 m-1 m-sm-2">Exercice 4</button>
-      </div>
-      <div class="row">
-        <div class="col-12 col-sm-12">
-          <p id="tabletitre"></p>
-          <p id="table1"></p>
-          <p id="table2"></p>
-          <p id="table3"></p>
-          <p id="table4"></p>
-          <p id="table5"></p>
-          <p id="table6"></p>
-          <p id="table7"></p>
-          <p id="table8"></p>
-          <p id="table9"></p>
-          <p id="table10"></p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-12 col-sm-12">
-          <p id="verifExo3"></p>
-          <p id="verif2Exo3"></p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-12 col-sm-12">
-          <p id="verifexo4"></p>
-        </div>
-      </div>
-      
-      <div class="row">
-        <div class="col-12 col-sm-12 mt-5">
-          <small><hr>
-          <p class="text-danger mb-0">* Disclaimer :</p>
-          <p class="text-danger mb-0">La créatrice de cette page décline toute responsabilité en matière de plantage d'ordinateur et vous prie d'adresser toute réclamation à :</p>
-          <a href="https://www.afpa.fr/centre/centre-d-amiens">AFPA Amiens</a></small>
-        </div>
-      </div>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    <!--to use font awesome icons-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
+    <!--link to css file-->
+    <link rel="stylesheet" href="style.css">
+    <title>Javascript</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-12 m-5">
+                <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top justify-content-around">
+                    <!-- Brand -->
+                    <h1 class="navbar-brand text-info">I <i class="fas fa-heart-broken"></i> JS - Manipulation du DOM</h1>
+                
+                    <!-- Links -->
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link text-info" href="#js4">JS4</a>
+                        </li>
+                
+                    <!-- Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-info" href="#conditions" id="navbardrop" data-toggle="dropdown">Conditions</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#parite">Parité</a>
+                                <a class="dropdown-item" href="#age">Age</a>
+                                <a class="dropdown-item" href="#calculette">Calculette</a>
+                                <a class="dropdown-item" href="#remise">Remise</a>
+                                <a class="dropdown-item" href="#participation">Participation</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-info" href="#" id="navbardrop" data-toggle="dropdown">Boucles</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#js7exo1">Saisie</a>
+                                <a class="dropdown-item" href="#js7exo2">Entiers inférieurs à N</a>
+                                <a class="dropdown-item" href="#js7exo3">Somme des entiers inférieurs à N</a>
+                                <a class="dropdown-item" href="#js7exo4">Somme d'un intervalle</a>
+                                <a class="dropdown-item" href="#js7exo5">Moyenne</a>
+                                <a class="dropdown-item" href="#js7exo6">Mini et maxi</a>
+                                <a class="dropdown-item" href="#js7exo7">Multiples</a>
+                                <a class="dropdown-item" href="#js7exo8">Nombre de voyelles</a>
+                                <a class="dropdown-item" href="#js7exo9">Calcul du nombre de jeunes, moyens et vieux</a>
+                                <a class="dropdown-item" href="#js7exo10">Nombre premier ou pas</a>
+                                <a class="dropdown-item" href="#js7exo11">Nombre magique</a>
+                            </div>
+                        </li>
+                        
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-info" href="#" id="navbardrop" data-toggle="dropdown">Fonctions</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#js8exo1">Produit et image</a>
+                                <a class="dropdown-item" href="#js8exo2">Table de multiplication</a>
+                                <a class="dropdown-item" href="#js8exo3">Compter nb de lettres</a>
+                                <a class="dropdown-item" href="#js8exo4">Menu</a>
+                                <a class="dropdown-item" href="#js8exo5">String Token</a>
+                            </div>
+                        </li>
+                        
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-info" href="#" id="navbardrop" data-toggle="dropdown">Tableaux</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#js9exo1">Créer un tableau</a>
+                                <a class="dropdown-item" href="#js9exo2">Menu avec fonctionnalités</a>
+                                <a class="dropdown-item" href="#js9exo3">Recherche de prénom</a>
+                                <a class="dropdown-item" href="#js9exo4">Tri à bulles</a>
+                                <a class="dropdown-item" href="#js9exo5">Tri par insertion</a>
+                                <a class="dropdown-item" href="#js9exo6">Calcul des heures</a>
+                                <a class="dropdown-item" href="#js9exo7">Crible d'Erathostène</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-info" href="#objetwindow">Objet Window</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-info" href="JS16Contact.html">Formulaire</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-info" href="#infosnavigateur">Navigateur</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
         
-      
+        <div class="row mt-5">
+            <div class="col-12 col-sm-12 m-2">
+                <h2 id="js4">JS4. Boites de dialogue de l'objet window</h2>
+                <ul>
+                    <li>Créer une page HTML qui demande successivement à l'utilisateur son nom puis son prénom.</li>
+                    <li>La page demande ensuite à l'utilisateur s'il est un homme ou une femme.</li>
+                    <li>Enfin, la page affiche les informations sur l'utilisateur.</li>
+                </ul>
+                <button type="button" id="exercice1" class="btn btn-info col-2 col-sm-2">JS4. Afficher du texte</button>
+                <p id="resultexo1"></p>
+                <hr>
+            </div>
+        </div>
 
-    </div><!--ferme container-->
-    
-    
+        <div class="row">
+            <div class="col-12 col-sm-12">
+                <h2 id="conditions">JS6. Conditions</h2>
+                <div class="btn-group justify-content-around">
+                    <button type="button" id="parite" class="btn btn-info col-2 col-sm-2 m-2">Parité: Teste si nombre donné est pair ou impair</button>
+                    <button type="button" id="age" class="btn btn-info col-2 col-sm-2 m-2">Age: Calcule l'âge à partir de la date de naissance</button>
+                    <button type="button" id="calculette" class="btn btn-info col-2 col-sm-2 m-2">Calculette: avec 2 nombres et un opérateur</button>
+                    <button type="button" id="remise" class="btn btn-info col-2 col-sm-2 m-2">Remise: Calcule prix total, port et remise à partir de PU et quantité</button>
+                    <button type="button" id="participation" class="btn btn-info col-2 col-sm-2 m-2">Participation: Calcule la participation en fonction des infos saisies </button>
+                </div>
+                <p id="reponsejs6"></p><!--emplacement de la réponse-->
+                <hr>
+                
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-sm-12">
+                <h2 id="boucles">JS7. Boucles</h2>
+                <div class="btn-group">
+                    <button type="button" id="js7exo1" class="btn btn-info col-2 col-sm-2 m-2">Saisie de prénoms</button>
+                    <button type="button" id="js7exo2" class="btn btn-info col-2 col-sm-2 m-2">Entiers inférieurs à N</button>
+                    <button type="button" id="js7exo3" class="btn btn-info col-2 col-sm-2 m-2">Somme des entiers inf à N</button>
+                    <button type="button" id="js7exo4" class="btn btn-info col-2 col-sm-2 m-2">Somme d'un intervalle</button>
+                    <button type="button" id="js7exo5" class="btn btn-info col-2 col-sm-2 m-2">Somme et Moyenne</button>
+                    <button type="button" id="js7exo6" class="btn btn-info col-2 col-sm-2 m-2">Mini et maxi</button>
+                </div>    
+                <div class="btn-group">
+                    <button type="button" id="js7exo7" class="btn btn-info col-2 col-sm-2 m-2">Multiples</button>
+                    <button type="button" id="js7exo8" class="btn btn-info col-2 col-sm-2 m-2">Nombre de voyelles</button>
+                    <button type="button" id="js7exo9" class="btn btn-info col-2 col-sm-2 m-2">Jeunes, moyens et vieux</button>
+                    <button type="button" id="js7exo10" class="btn btn-info col-2 col-sm-2 m-2">Nombre premier ou pas</button>
+                    <button type="button" id="js7exo11" class="btn btn-info col-2 col-sm-2 m-2">Nombre magique</button>
+                    <button type="button" id="js7exo11bis" class="btn btn-info col-2 col-sm-2 m-2">Start : Nombre magique/formulaire</button>
+                </div>
+                <form id="formnbmgq" action="#"><!--css : display none pour cacher donc form n'apparait que si on clic sur bouton 'Start : nb magique/formulaire'-->
+                    <label id="labelnbmagique"><h3>Nombre magique:</h3> Essayez de trouver le nombre magique (entre 1 et 100):</label>
+                    <input id="inputnbmagique"><input type="button" id="btnnbmagique" value="Verifier">
+                    <p class="text-right mr-5"><input type="button" id="btnrejouer" value="Rejouer"></p>
+                    
+                </form>
+                <p id="reponsejs7"></p><!--emplacement de la réponse-->
+                <p id="reponse2js7"></p><!--emplacement de la réponse 2 pour itération-->
+                <hr>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-sm-12">
+                <h2 id="fonctions">JS8. Fonctions</h2>
+                <div class="btn-group justify-content-around">
+                    <button type="button" id="js8exo1" class="btn btn-info col-2 col-sm-2 m-2">Produit et image</button>
+                    <button type="button" id="js8exo2" class="btn btn-info col-2 col-sm-2 m-2">Table de multiplication</button>
+                    <button type="button" id="js8exo3" class="btn btn-info col-2 col-sm-2 m-2">Compter nb de lettres</button>
+                    <button type="button" id="js8exo4" class="btn btn-info col-2 col-sm-2 m-2">Menu</button>
+                    <button type="button" id="js8exo5" class="btn btn-info col-2 col-sm-2 m-2">String Token</button>
+                </div>
+                <p id="reponsejs8"></p><!--emplacement de la réponse-->
+                <hr>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-sm-12">
+                <h2 id="fonctions">JS9. Tableaux</h2>
+                <div class="btn-group justify-content-around">
+                    <button type="button" id="js9exo1" class="btn btn-info col-2 col-sm-2 m-2">Créer un tableau</button>
+                    <button type="button" id="js9exo2" class="btn btn-info col-2 col-sm-2 m-2">Menu avec fonctionnalités</button>
+                    <button type="button" id="js9exo3" class="btn btn-info col-2 col-sm-2 m-2">Recherche de prénom</button>
+                    <button type="button" id="js9exo4" class="btn btn-info col-2 col-sm-2 m-2">Tri à bulles</button>
+                    <button type="button" id="js9exo5" class="btn btn-info col-2 col-sm-2 m-2">Tri par insertion</button>
+                    <button type="button" id="js9exo6" class="btn btn-info col-2 col-sm-2 m-2">Calcul des heures</button>
+                    <button type="button" id="js9exo7" class="btn btn-info col-2 col-sm-2 m-2">Crible d'Erathostène</button>
+                </div>
+                <p id="reponsejs9"></p><!--emplacement de la réponse-->
+                <hr>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-sm-12">
+                <h2 id="objetwindow">Manipuler l'objet window : exemples</h2>
+                <div class="btn-group justify-content-around">
+                    <button type="button" id="newwindow" class="btn btn-info col-2 col-sm-2 m-2">Créer une fenêtre</button>
+                    <button type="button" id="fermewindow" class="btn btn-info col-2 col-sm-2 m-2">Fermer une fenêtre</button>
+                    <button type="button" id="minuterie" class="btn btn-info col-2 col-sm-2 m-2">Déclencher minuterie</button>
+                    <button type="button" id="stopmin" class="btn btn-info col-2 col-sm-2 m-2">Stopper minuterie</button>
+                </div>
+                <p id="repobjwindow"></p><!--emplacement de l'insertion / innerhtml-->
+                <hr>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-sm-12">
+                <h2 id="infosnavigateur">DOM Navigator</h2>
+                <p>Infos importantes pour régler problèmes de compatibilité entre navigateurs par exemple :</p>
+                <button id="infosnav">Cliquez ici!</button>
+                <p id="afficheinfonav"></p><!--emplacement de l'insertion / innerhtml-->
+                <hr>
+            </div>
+        </div>
+
+    </div>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <!--JS non intrusif: tout dans fichier .js -->
-    <script src="JSevaluation.js"></script>
-  </body>
+
+    <script src="exosjs.js"></script>
+</body>
 </html>
