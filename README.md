@@ -8,3 +8,7 @@ Mon e-mail: ibengrine@yahoo.com
 
 PS. Work in Progress... n'hésitez pas à me contacter si vous avez des critiques constructives, merci!
 
+Du 30/04/2021 au 28/02/2024 :
+Développeuse Web chez Iteracode
+
+Disponible à partir du 01/03/2024
